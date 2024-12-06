@@ -9,8 +9,8 @@ fn get_char(data: String) -> char {
 }
 
 // Should take ownership
-fn string_uppercase(mut data: &String) {
-    data = data.to_uppercase();
+fn string_uppercase(data: &String) {
+    let data = data.to_uppercase();
 
     println!("{data}");
 }
@@ -20,5 +20,5 @@ fn main() {
 
     get_char(data);
 
-    string_uppercase(&data);
+    // string_uppercase(&data);
 }
